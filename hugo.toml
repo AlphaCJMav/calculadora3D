@@ -1,3 +1,6 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://github.com/AlphaCJMav/calculadora3D/'
+googleAnalytics = ""
+theme = ""
+publishDir = "docs"
+languageCode = 'es'
+title = 'Calculadora 3D Alpha Impresiones'
