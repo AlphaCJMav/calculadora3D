@@ -13,6 +13,7 @@ canonifyURLs = true
   ShowShareButtons = false
   ShowCodeCopyButtons = true
   themeColor = "light"
+  homeInfoParams = { Title = "Calculadora 3D Alpha Impresiones", Content = "Calculá tus precios de impresión fácilmente" }
 
 [markup.goldmark.renderer]
   unsafe = true  # permite HTML incrustado
