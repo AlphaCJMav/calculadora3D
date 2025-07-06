@@ -1,6 +1,23 @@
 baseURL = 'https://github.com/AlphaCJMav/calculadora3D/'
 googleAnalytics = ""
-theme = ""
+theme = "PaperMod"
 publishDir = "docs"
 languageCode = 'es'
 title = 'Calculadora 3D Alpha Impresiones'
+defaultContentLanguage = "es"
+enableRobotsTXT = true
+canonifyURLs = true
+
+[params]
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowCodeCopyButtons = true
+  themeColor = "light"
+
+[markup.goldmark.renderer]
+  unsafe = true  # permite HTML incrustado
+
+[[menu.main]]
+  name = "Inicio"
+  url = "/"
+  weight = 1

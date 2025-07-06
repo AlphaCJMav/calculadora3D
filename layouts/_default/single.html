@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <h1>Calculadora de impresión 3D</h1>
+  <p>Completá los datos para calcular el precio de tu impresión:</p>
+
+  <form id="calc-form">
+    <label>Gramos de filamento: <input type="number" id="gramos" required></label><br><br>
+    <label>Tiempo (horas): <input type="number" id="horas" required></label><br><br>
+    <label>Precio por gramo ($): <input type="number" id="precio_gramo" value="5"></label><br><br>
+    <label>Precio por hora ($): <input type="number" id="precio_hora" value="200"></label><br><br>
+    <button type="button" onclick="calcular()">Calcular</button>
+  </form>
+
+  <h2 id="resultado"></h2>
+
+  <script>
+    function calcular() {
+      const gramos = parseFloat(document.getElementById("gramos").value);
+      const horas = parseFloat(document.getElementById("horas").value);
+      const precioGramo = parseFloat(document.getElementById("precio_gramo").value);
+      const precioHora = parseFloat(document.getElementById("precio_hora").value);
+
+      const costoMaterial = gramos * precioGramo;
+      const costoTiempo = horas * precioHora;
+      const total = costoMaterial + costoTiempo;
+
+      document.getElementById("resultado").innerText = `Costo estimado: $${total.toFixed(2)}`;
+    }
+  </script>
+{{ end }}
