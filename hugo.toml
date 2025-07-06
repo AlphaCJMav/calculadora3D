@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/AlphaCJMav/calculadora3D/'
+baseURL = 'https://alphacjmav.github.io/calculadora3D/'
 googleAnalytics = ""
 theme = "PaperMod"
 publishDir = "docs"
