@@ -14,11 +14,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Posts | Alpha Impresiones 3D</title>
+<title>TODOS LOS PDF | Alpha Impresiones 3D</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Alpha Impresiones 3D">
+<meta name="description" content="PDF">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/calculadora3D/post/">
+<link rel="canonical" href="http://localhost:1313/calculadora3D/post/pdf/">
 <link crossorigin="anonymous" href="http://localhost:1313/calculadora3D/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/calculadora3D/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/calculadora3D/favicon-16x16.png">
@@ -27,8 +27,7 @@
 <link rel="mask-icon" href="http://localhost:1313/calculadora3D/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/calculadora3D/post/index.xml">
-<link rel="alternate" hreflang="es" href="http://localhost:1313/calculadora3D/post/">
+<link rel="alternate" hreflang="es" href="http://localhost:1313/calculadora3D/post/pdf/">
 <noscript>
     <style>
         #theme-toggle,
@@ -68,7 +67,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -123,37 +122,26 @@
 </div>
 
 
-    <main class="main"> 
-<header class="page-header">
-  <h1>
-    Posts
-  </h1>
-</header>
+    <main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      TODOS LOS PDF
+    </h1>
+    <div class="post-meta">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Calculadora de Precios
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Calculá tus precios de Impresión 3D fácilmente usando la herramienta de Alpha Impresiones:
-Calculadora de Costos de Impresión 3D Gramos de material usados: Tiempo de impresión (horas): Costo por gramo ($): Costo por hora ($): Calcular Recursos adicionales WhatsApp Descargar PDF </p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Calculadora de Precios" href="http://localhost:1313/calculadora3D/calculadora/"></a>
-</article>
+</div>
+  </header> 
+  <div class="post-content"><p>PDF</p>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TODOS LOS PDF
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>PDF
-</p>
+
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to TODOS LOS PDF" href="http://localhost:1313/calculadora3D/post/pdf/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
 </article>
     </main>
     
@@ -225,6 +213,53 @@ Calculadora de Costos de Impresión 3D Gramos de material usados: Tiempo de impr
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copiar';
+
+        function copyingDone() {
+            copybutton.innerHTML = '¡copiado!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copiar';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

@@ -1,0 +1,129 @@
+<section class="discord-style-section">
+  <div class="calculator-box">
+    <h2>Calculadora de Costos de Impresión 3D</h2>
+    <label>Gramos de material usados:
+      <input type="number" id="gramos" placeholder="Ej: 50">
+    </label>
+    <label>Tiempo de impresión (horas):
+      <input type="number" id="horas" placeholder="Ej: 3.5">
+    </label>
+    <label>Costo por gramo ($):
+      <input type="number" id="costoGramo" value="0.25">
+    </label>
+    <label>Costo por hora ($):
+      <input type="number" id="costoHora" value="150">
+    </label>
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+  </div>
+</section>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .discord-style-section {
+    background: linear-gradient(145deg, #4f0599, #1d1b52);
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .discord-style-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    top: -200px;
+    left: -200px;
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 10s infinite ease-in-out;
+  }
+
+  .calculator-box {
+    background: linear-gradient(to bottom right, #232428, #1c1d20);
+    border: 2px solid rgba(114, 137, 218, 0.3);
+    border-radius: 24px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    color: white;
+  }
+
+  .calculator-box h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .calculator-box label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .calculator-box input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    background: #2e3035;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .calculator-box button {
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: 0.75rem;
+    background-color: #5865F2;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .calculator-box button:hover {
+    background-color: #4752c4;
+  }
+
+  #resultado {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #b9bbbe;
+    text-align: center;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+
+<script>
+function calcular() {
+  const gramos = parseFloat(document.getElementById('gramos').value) || 0;
+  const horas = parseFloat(document.getElementById('horas').value) || 0;
+  const costoGramo = parseFloat(document.getElementById('costoGramo').value) || 0;
+  const costoHora = parseFloat(document.getElementById('costoHora').value) || 0;
+
+  const total = (gramos * costoGramo) + (horas * costoHora);
+  document.getElementById('resultado').innerText = `Costo estimado: $${total.toFixed(2)}`;
+}
+</script>

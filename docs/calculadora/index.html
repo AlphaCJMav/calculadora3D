@@ -14,11 +14,40 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Posts | Alpha Impresiones 3D</title>
+<title>Calculadora de Precios | Alpha Impresiones 3D</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Alpha Impresiones 3D">
+<meta name="description" content="Calculá tus precios de Impresión 3D fácilmente usando la herramienta de Alpha Impresiones:
+
+  
+    Calculadora de Costos de Impresión 3D
+    Gramos de material usados:
+      
+    
+    Tiempo de impresión (horas):
+      
+    
+    Costo por gramo ($):
+      
+    
+    Costo por hora ($):
+      
+    
+    Calcular
+    
+  
+
+
+
+
+
+
+Recursos adicionales
+
+WhatsApp
+Descargar PDF
+">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/calculadora3D/post/">
+<link rel="canonical" href="http://localhost:1313/calculadora3D/calculadora/">
 <link crossorigin="anonymous" href="http://localhost:1313/calculadora3D/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/calculadora3D/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/calculadora3D/favicon-16x16.png">
@@ -27,8 +56,7 @@
 <link rel="mask-icon" href="http://localhost:1313/calculadora3D/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/calculadora3D/post/index.xml">
-<link rel="alternate" hreflang="es" href="http://localhost:1313/calculadora3D/post/">
+<link rel="alternate" hreflang="es" href="http://localhost:1313/calculadora3D/calculadora/">
 <noscript>
     <style>
         #theme-toggle,
@@ -68,7 +96,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -123,37 +151,161 @@
 </div>
 
 
-    <main class="main"> 
-<header class="page-header">
-  <h1>
-    Posts
-  </h1>
-</header>
+    <main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Calculadora de Precios
+    </h1>
+    <div class="post-meta">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Calculadora de Precios
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Calculá tus precios de Impresión 3D fácilmente usando la herramienta de Alpha Impresiones:
-Calculadora de Costos de Impresión 3D Gramos de material usados: Tiempo de impresión (horas): Costo por gramo ($): Costo por hora ($): Calcular Recursos adicionales WhatsApp Descargar PDF </p>
+</div>
+  </header> 
+  <div class="post-content"><p>Calculá tus precios de Impresión 3D fácilmente usando la herramienta de Alpha Impresiones:</p>
+<section class="discord-style-section">
+  <div class="calculator-box">
+    <h2>Calculadora de Costos de Impresión 3D</h2>
+    <label>Gramos de material usados:
+      <input type="number" id="gramos" placeholder="Ej: 50">
+    </label>
+    <label>Tiempo de impresión (horas):
+      <input type="number" id="horas" placeholder="Ej: 3.5">
+    </label>
+    <label>Costo por gramo ($):
+      <input type="number" id="costoGramo" value="0.25">
+    </label>
+    <label>Costo por hora ($):
+      <input type="number" id="costoHora" value="150">
+    </label>
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Calculadora de Precios" href="http://localhost:1313/calculadora3D/calculadora/"></a>
-</article>
+</section>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">TODOS LOS PDF
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>PDF
-</p>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .discord-style-section {
+    background: linear-gradient(145deg, #4f0599, #1d1b52);
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .discord-style-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    top: -200px;
+    left: -200px;
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 10s infinite ease-in-out;
+  }
+
+  .calculator-box {
+    background: linear-gradient(to bottom right, #232428, #1c1d20);
+    border: 2px solid rgba(114, 137, 218, 0.3);
+    border-radius: 24px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    color: white;
+  }
+
+  .calculator-box h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .calculator-box label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .calculator-box input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    background: #2e3035;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .calculator-box button {
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: 0.75rem;
+    background-color: #5865F2;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .calculator-box button:hover {
+    background-color: #4752c4;
+  }
+
+  #resultado {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #b9bbbe;
+    text-align: center;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+
+<script>
+function calcular() {
+  const gramos = parseFloat(document.getElementById('gramos').value) || 0;
+  const horas = parseFloat(document.getElementById('horas').value) || 0;
+  const costoGramo = parseFloat(document.getElementById('costoGramo').value) || 0;
+  const costoHora = parseFloat(document.getElementById('costoHora').value) || 0;
+
+  const total = (gramos * costoGramo) + (horas * costoHora);
+  document.getElementById('resultado').innerText = `Costo estimado: $${total.toFixed(2)}`;
+}
+</script>
+
+<h3 id="recursos-adicionales">Recursos adicionales<a hidden class="anchor" aria-hidden="true" href="#recursos-adicionales">#</a></h3>
+<ul>
+<li><a href="https://wa.me/xxxxxxxxxxx">WhatsApp</a></li>
+<li><a href="https://tusitio.com/recursos/guia.pdf">Descargar PDF</a></li>
+</ul>
+
+
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to TODOS LOS PDF" href="http://localhost:1313/calculadora3D/post/pdf/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
 </article>
     </main>
     
@@ -225,6 +377,53 @@ Calculadora de Costos de Impresión 3D Gramos de material usados: Tiempo de impr
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copiar';
+
+        function copyingDone() {
+            copybutton.innerHTML = '¡copiado!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copiar';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

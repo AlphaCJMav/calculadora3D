@@ -1,3 +1,3 @@
 User-agent: *
-Disallow:
-Sitemap: https://alphacjmav.github.io/calculadora3D/sitemap.xml
+Disallow: /
+Sitemap: http://localhost:1313/calculadora3D/sitemap.xml

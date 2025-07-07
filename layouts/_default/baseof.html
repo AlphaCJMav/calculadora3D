@@ -1,0 +1,40 @@
+{{- if lt hugo.Version "0.146.0" }}
+{{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+<meta name="description" content="Calculadora de precios para impresión 3D. Calculá tus costos fácilmente con Alpha Impresiones.">
+<meta name="keywords" content="impresión 3D, calculadora, precios, filamento, PLA, costos, Alpha Impresiones">
+<meta name="author" content="Alpha Impresiones">
+<meta property="og:title" content="Calculadora 3D Alpha Impresiones" />
+<meta property="og:description" content="Calculadora simple y efectiva para precios de impresión 3D." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="/css/banner.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+
+     {{ partial "publicidades/banner_inicio.html" . }}
+
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+
+</body>
+
+</html>
