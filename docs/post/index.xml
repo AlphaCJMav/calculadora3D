@@ -15,6 +15,7 @@
       <description>&lt;p&gt;Calculá tus precios de Impresión 3D fácilmente usando la herramienta de Alpha Impresiones:&lt;/p&gt;
 &lt;section class=&#34;discord-style-section&#34;&gt;
   &lt;div class=&#34;calculator-box&#34;&gt;
+    &lt;div class=&#34;spinning-icon&#34;&gt;&lt;/div&gt; 
     &lt;h2&gt;Calculadora de Costos de Impresión 3D&lt;/h2&gt;
     &lt;label&gt;Gramos de material usados:
       &lt;input type=&#34;number&#34; id=&#34;gramos&#34; placeholder=&#34;Ej: 50&#34;&gt;
@@ -32,6 +33,7 @@
     &lt;p id=&#34;resultado&#34;&gt;&lt;/p&gt;
   &lt;/div&gt;
 &lt;/section&gt;
+
 
 &lt;style&gt;
   body {
@@ -129,6 +131,24 @@
     50% { transform: translateY(20px); }
     100% { transform: translateY(0); }
   }
+
+  .spinning-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem auto;  
+    background-image: url(&#39;https://cdn-icons-png.flaticon.com/512/1055/1055646.png&#39;);
+    background-size: cover;
+    animation: spin 6s linear infinite;
+    opacity: 0.3;
+    z-index: 2;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
 &lt;/style&gt;
 
 &lt;script&gt;

@@ -1,5 +1,6 @@
 <section class="discord-style-section">
   <div class="calculator-box">
+    <div class="spinning-icon"></div> <!-- Ícono ahora dentro del cuadro -->
     <h2>Calculadora de Costos de Impresión 3D</h2>
     <label>Gramos de material usados:
       <input type="number" id="gramos" placeholder="Ej: 50">
@@ -17,6 +18,7 @@
     <p id="resultado"></p>
   </div>
 </section>
+
 
 <style>
   body {
@@ -114,6 +116,24 @@
     50% { transform: translateY(20px); }
     100% { transform: translateY(0); }
   }
+
+  .spinning-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem auto; /* centra y agrega espacio abajo */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1055/1055646.png');
+    background-size: cover;
+    animation: spin 6s linear infinite;
+    opacity: 0.3;
+    z-index: 2;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
 </style>
 
 <script>
