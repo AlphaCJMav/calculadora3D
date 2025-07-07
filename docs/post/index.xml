@@ -1,137 +1,180 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Alpha Impresiones 3D</title><link>https://alphacjmav.github.io/calculadora3d/post/</link><description>Recent content in Posts on Alpha Impresiones 3D</description><generator>Hugo -- 0.147.9</generator><language>es</language><atom:link href="https://alphacjmav.github.io/calculadora3d/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Calculadora de Precios</title><link>https://alphacjmav.github.io/calculadora3d/calculadora/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alphacjmav.github.io/calculadora3d/calculadora/</guid><description>&lt;p>Calculá tus precios de Impresión 3D fácilmente usando la herramienta de Alpha Impresiones:&lt;/p>
-&lt;section class="discord-style-section">
-&lt;div class="calculator-box">
-&lt;div class="spinning-icon">&lt;/div>
-&lt;h2>Calculadora de Costos de Impresión 3D&lt;/h2>
-&lt;label>Gramos de material usados:
-&lt;input type="number" id="gramos" placeholder="Ej: 50">
-&lt;/label>
-&lt;label>Tiempo de impresión (horas):
-&lt;input type="number" id="horas" placeholder="Ej: 3.5">
-&lt;/label>
-&lt;label>Costo por gramo ($):
-&lt;input type="number" id="costoGramo" value="0.25">
-&lt;/label>
-&lt;label>Costo por hora ($):
-&lt;input type="number" id="costoHora" value="150">
-&lt;/label>
-&lt;button onclick="calcular()">Calcular&lt;/button>
-&lt;p id="resultado">&lt;/p>
-&lt;/div>
-&lt;/section>
-&lt;style>
-body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-}
-.discord-style-section {
-background: linear-gradient(145deg, #4f0599, #1d1b52);
-min-height: 100vh;
-padding: 3rem 1rem;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-overflow: hidden;
-}
-.discord-style-section::before {
-content: "";
-position: absolute;
-width: 600px;
-height: 600px;
-background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-top: -200px;
-left: -200px;
-border-radius: 50%;
-z-index: 0;
-animation: float 10s infinite ease-in-out;
-}
-.calculator-box {
-background: linear-gradient(to bottom right, #232428, #1c1d20);
-border: 2px solid rgba(114, 137, 218, 0.3);
-border-radius: 24px;
-padding: 2rem;
-width: 100%;
-max-width: 400px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-position: relative;
-z-index: 1;
-color: white;
-}
-.calculator-box h2 {
-font-size: 1.7rem;
-color: #ffffff;
-margin-bottom: 1.5rem;
-}
-.calculator-box label {
-display: block;
-margin-bottom: 1rem;
-font-size: 0.95rem;
-}
-.calculator-box input {
-width: 100%;
-padding: 0.6rem;
-margin-top: 0.3rem;
-background: #2e3035;
-border: 1px solid #444;
-border-radius: 8px;
-color: #fff;
-font-size: 1rem;
-}
-.calculator-box button {
-width: 100%;
-margin-top: 1.2rem;
-padding: 0.75rem;
-background-color: #5865F2;
-border: none;
-border-radius: 10px;
-font-size: 1rem;
-font-weight: bold;
-color: white;
-cursor: pointer;
-transition: background 0.3s ease;
-}
-.calculator-box button:hover {
-background-color: #4752c4;
-}
-#resultado {
-margin-top: 1.5rem;
-font-size: 1.1rem;
-color: #b9bbbe;
-text-align: center;
-}
-@keyframes float {
-0% { transform: translateY(0); }
-50% { transform: translateY(20px); }
-100% { transform: translateY(0); }
-}
-.spinning-icon {
-width: 60px;
-height: 60px;
-margin: 0 auto 1rem auto;
-background-image: url('https://cdn-icons-png.flaticon.com/512/1055/1055646.png');
-background-size: cover;
-animation: spin 6s linear infinite;
-opacity: 0.3;
-z-index: 2;
-}
-@keyframes spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
-}
-&lt;/style>
-&lt;script>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Alpha Impresiones 3D</title>
+    <link>https://alphacjmav.github.io/calculadora3D/post/</link>
+    <description>Recent content in Posts on Alpha Impresiones 3D</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>es</language>
+    <atom:link href="https://alphacjmav.github.io/calculadora3D/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculadora de Precios</title>
+      <link>https://alphacjmav.github.io/calculadora3D/calculadora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alphacjmav.github.io/calculadora3D/calculadora/</guid>
+      <description>&lt;p&gt;Calculá tus precios de Impresión 3D fácilmente usando la herramienta de Alpha Impresiones:&lt;/p&gt;
+&lt;section class=&#34;discord-style-section&#34;&gt;
+  &lt;div class=&#34;calculator-box&#34;&gt;
+    &lt;div class=&#34;spinning-icon&#34;&gt;&lt;/div&gt; 
+    &lt;h2&gt;Calculadora de Costos de Impresión 3D&lt;/h2&gt;
+    &lt;label&gt;Gramos de material usados:
+      &lt;input type=&#34;number&#34; id=&#34;gramos&#34; placeholder=&#34;Ej: 50&#34;&gt;
+    &lt;/label&gt;
+    &lt;label&gt;Tiempo de impresión (horas):
+      &lt;input type=&#34;number&#34; id=&#34;horas&#34; placeholder=&#34;Ej: 3.5&#34;&gt;
+    &lt;/label&gt;
+    &lt;label&gt;Costo por gramo ($):
+      &lt;input type=&#34;number&#34; id=&#34;costoGramo&#34; value=&#34;0.25&#34;&gt;
+    &lt;/label&gt;
+    &lt;label&gt;Costo por hora ($):
+      &lt;input type=&#34;number&#34; id=&#34;costoHora&#34; value=&#34;150&#34;&gt;
+    &lt;/label&gt;
+    &lt;button onclick=&#34;calcular()&#34;&gt;Calcular&lt;/button&gt;
+    &lt;p id=&#34;resultado&#34;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+
+&lt;style&gt;
+  body {
+    margin: 0;
+    font-family: &#39;Segoe UI&#39;, sans-serif;
+  }
+
+  .discord-style-section {
+    background: linear-gradient(145deg, #4f0599, #1d1b52);
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .discord-style-section::before {
+    content: &#34;&#34;;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    top: -200px;
+    left: -200px;
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 10s infinite ease-in-out;
+  }
+
+  .calculator-box {
+    background: linear-gradient(to bottom right, #232428, #1c1d20);
+    border: 2px solid rgba(114, 137, 218, 0.3);
+    border-radius: 24px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
+    color: white;
+  }
+
+  .calculator-box h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .calculator-box label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .calculator-box input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    background: #2e3035;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .calculator-box button {
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: 0.75rem;
+    background-color: #5865F2;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .calculator-box button:hover {
+    background-color: #4752c4;
+  }
+
+  #resultado {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #b9bbbe;
+    text-align: center;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+  }
+
+  .spinning-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem auto;  
+    background-image: url(&#39;https://cdn-icons-png.flaticon.com/512/1055/1055646.png&#39;);
+    background-size: cover;
+    animation: spin 6s linear infinite;
+    opacity: 0.3;
+    z-index: 2;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+&lt;/style&gt;
+
+&lt;script&gt;
 function calcular() {
-const gramos = parseFloat(document.getElementById('gramos').value) || 0;
-const horas = parseFloat(document.getElementById('horas').value) || 0;
-const costoGramo = parseFloat(document.getElementById('costoGramo').value) || 0;
-const costoHora = parseFloat(document.getElementById('costoHora').value) || 0;
-const total = (gramos * costoGramo) + (horas * costoHora);
-document.getElementById('resultado').innerText = `Costo estimado: $${total.toFixed(2)}`;
+  const gramos = parseFloat(document.getElementById(&#39;gramos&#39;).value) || 0;
+  const horas = parseFloat(document.getElementById(&#39;horas&#39;).value) || 0;
+  const costoGramo = parseFloat(document.getElementById(&#39;costoGramo&#39;).value) || 0;
+  const costoHora = parseFloat(document.getElementById(&#39;costoHora&#39;).value) || 0;
+
+  const total = (gramos * costoGramo) + (horas * costoHora);
+  document.getElementById(&#39;resultado&#39;).innerText = `Costo estimado: $${total.toFixed(2)}`;
 }
-&lt;/script>
-&lt;h3 id="recursos-adicionales">Recursos adicionales&lt;/h3>
-&lt;ul>
-&lt;li>&lt;a href="https://wa.me/xxxxxxxxxxx">WhatsApp&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://tusitio.com/recursos/guia.pdf">Descargar PDF&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>TODOS LOS PDF</title><link>https://alphacjmav.github.io/calculadora3d/post/pdf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alphacjmav.github.io/calculadora3d/post/pdf/</guid><description>&lt;p>PDF&lt;/p></description></item></channel></rss>
+&lt;/script&gt;
+
+&lt;h3 id=&#34;recursos-adicionales&#34;&gt;Recursos adicionales&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wa.me/xxxxxxxxxxx&#34;&gt;WhatsApp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tusitio.com/recursos/guia.pdf&#34;&gt;Descargar PDF&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>TODOS LOS PDF</title>
+      <link>https://alphacjmav.github.io/calculadora3D/post/pdf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alphacjmav.github.io/calculadora3D/post/pdf/</guid>
+      <description>&lt;p&gt;PDF&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
